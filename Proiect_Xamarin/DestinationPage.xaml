@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_Xamarin.DestinationPage">
+    <ContentPage.Content>
+        <Grid Margin="20" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Row="0" Grid.Column="0" Text="Decolare"/>
+            <Editor Grid.Row="0" Grid.Column="1" Text="{Binding ID_aeroport_decolare}" />
+            <Label Grid.Row="1" Grid.Column="0" Text="Aterizare"/>
+            <Editor Grid.Row="1" Grid.Column="1" Text="{Binding ID_aeroport_aterizare}" />
+            <Label Grid.Row="2" Grid.Column="0" Text="Data"/>
+            <Editor Grid.Row="2" Grid.Column="1" Text="{Binding Data}" />
+            <Label Grid.Row="3" Grid.Column="0" Text="Pret"/>
+            <Editor Grid.Row="3" Grid.Column="1" Text="{Binding Pret}"/>
+            <Button Grid.Row="4" Grid.Column="0" Text="SAVE" Clicked="SaveButton_Clicked"/>
+            <Button Grid.Row="4" Grid.Column="1" Text="CANCEL" Clicked="CancelButton_Clicked"/>
+           
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_Xamarin.BoardingPassPage"
+             Title="Check-in">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="checkGrid" Margin="20" HorizontalOptions="Center" VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Numar zbor"/>
+                <Editor x:Name="editorID" Grid.Row="0" Grid.Column="1" />
+                <Button x:Name="btnOK" Grid.Row="0" Grid.Column="2" Text="OK" Clicked="btnOK_Clicked"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Decolare"/>
+                <Label x:Name="labelDecolare" Grid.Row="1" Grid.Column="1" Text="{Binding ID_aeroport_decolare}" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Aterizare"/>
+                <Label x:Name="labelAterizare" Grid.Row="2" Grid.Column="1" Text="{Binding ID_aeroport_aterizare}" />
+                
+                <Label Grid.Row="3" Grid.Column="0" Text="Data"/>
+                <Label x:Name="labelData" Grid.Row="3" Grid.Column="1" Text="{Binding Data}" />
+                
+                <Label Grid.Row="4" Grid.Column="0" Text="Pret"/>
+                <Label x:Name="labelPret" Grid.Row="4" Grid.Column="1" Text="{Binding Pret}"/>
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Loc"/>
+                <Editor x:Name="editorLoc" Grid.Row="5" Grid.Column="1"/>
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Poarta"/>
+                <Editor x:Name="editorPoarta" Grid.Row="6" Grid.Column="1"/>
+
+                <Label Grid.Row="7" Grid.Column="0" Text="Terminal"/>
+                <Editor x:Name="editorTerminal" Grid.Row="7" Grid.Column="1"/>
+
+                <Button Grid.Row="8" Grid.ColumnSpan="3"  Text="Generare BoardingPass" HorizontalOptions="CenterAndExpand" Clicked="BoardingPassButton_Clicked"/>
+            
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_Xamarin.FinalBoardingPassPage"
+             Title="Boarding Pass">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="checkGrid" Margin="20" HorizontalOptions="Center" VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Numar Boarding Pass"/>
+                <Label x:Name="lblID" Grid.Row="0" Grid.Column="1" Text="{Binding ID}"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Numar Zbor"/>
+                <Label x:Name="lblZbor" Grid.Row="1" Grid.Column="1" Text="{Binding ID_zbor}"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Loc"/>
+                <Label x:Name="lblLoc" Grid.Row="2" Grid.Column="1" Text="{Binding Loc}"/>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Poarta"/>
+                <Label x:Name="lblPoarta" Grid.Row="3" Grid.Column="1" Text="{Binding Poarta}"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Terminal"/>
+                <Label x:Name="lblTerminal" Grid.Row="4" Grid.Column="1" Text="{Binding Terminal}"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

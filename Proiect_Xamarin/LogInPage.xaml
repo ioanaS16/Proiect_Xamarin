@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local1="clr-namespace:Proiect_Xamarin"
+             x:Class="Proiect_Xamarin.LogInPage"
+             Title="LogIN">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="l_ID" Text="ID client" FontSize="20" />
+            <Entry x:Name="entID" Placeholder="ID-ul dvs" Text="{Binding ID}"/>
+
+            <Label x:Name="l_parola" Text="Parola" FontSize="20"/>
+            <Entry x:Name="entParola" Placeholder="Introduceti o parola" Text="{Binding Parola}"/>
+
+            <Button x:Name="btnSgnIN" Text="Sign IN" Clicked="btnSgnIN_Clicked"/>
+            <Button x:Name="btnSgnUP" Text="Sign UP" Clicked="btnSgnUP_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_Xamarin.MyClientsPage"
+             Title="Clienti inregistrati">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnShow" Text="Show clients" Clicked="btnShow_Clicked"/>
+            <ListView x:Name="listaClienti" Margin="10" ItemsSource="{Binding Client}">   <!--ItemsSource="{Binding Client}"-->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding ID, StringFormat='Client ID {0:F0}'}" Detail="{Binding Parola}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

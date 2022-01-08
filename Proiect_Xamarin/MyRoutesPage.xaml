@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_Xamarin.MyRoutesPage"
+             Title="My Destinations">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddButton_Clicked"/>
+        <ToolbarItem Text="Check-IN" Clicked="CheckIn_Clicked"/>
+    </ContentPage.ToolbarItems>
+ 
+    <StackLayout>
+        <Grid BackgroundColor="#2196F3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
+        
+    </Grid>
+    <ListView x:Name="listaPrincipala" Margin="10" ItemsSource="{Binding Bilet}">
+        <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding ID, StringFormat='Biletul cu numarul {0:F0}'}" Detail="{Binding Data}"/>
+                </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </StackLayout>
+</ContentPage>

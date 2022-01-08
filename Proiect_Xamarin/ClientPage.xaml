@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_Xamarin.ClientPage"
+             Title="Inregistrare">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="clientGrid" Margin="20" HorizontalOptions="Center" VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Row="0" Grid.Column="0" Text="ID client"/>
+                <Editor x:Name="entry_ID" Placeholder="Introduceti un ID" Grid.Row="0" Grid.Column="1" Text="{Binding ID}" />
+              
+                <Label Grid.Row="1" Grid.Column="0" Text="Nume"/>
+                <Editor x:Name="entry_nume" Placeholder="Numele dvs" Grid.Row="1" Grid.Column="1" Text="{Binding Nume}"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Prenume"/>
+                <Editor x:Name="entry_prenume" Placeholder="Prenumele dvs" Grid.Row="2" Grid.Column="1" Text="{Binding Prenume}"/>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Email"/>
+                <Editor x:Name="entry_email" Placeholder="Introdceti o adresa de email" Grid.Row="3" Grid.Column="1" Text="{Binding Email}"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Parola"/>
+                <Editor x:Name="entry_parola" Placeholder="Introdceti o parola" Grid.Row="4" Grid.Column="1" Text="{Binding Parola}"/>
+
+                <Button x:Name="btnRegister" Text="Inregistrare" Clicked="btnRegister_Clicked" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <!--<Button x:Name="btnView" Text="Vizualizare" Clicked="btnView_Clicked" Grid.Row="5" Grid.Column="1" />-->
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
